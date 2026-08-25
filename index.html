@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Notes | Repositorio de Apuntes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    ##### Dashboard mejorar e implementación
+    <!-- Navegación Superior -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> U-Notes
+        </div>
+        <div class="search-bar">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="text" placeholder="Buscar apuntes, materias, temas...">
+            <button class="btn-search">Buscar</button>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-upload"><i class="fa-solid fa-cloud-arrow-up"></i> Subir Apunte</button>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Usuario+Estudiante&background=0D8ABC&color=fff" alt="Perfil">
+                <span>Mi Perfil</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="container">
+        
+        <!-- Barra Lateral: Filtros -->
+        <aside class="sidebar">
+            <h3>Filtros de Búsqueda</h3>
+            
+            <div class="filter-group">
+                <label>Facultad</label>
+                <select>
+                    <option>Todas las facultades</option>
+                    <option selected>Facultad de Ingeniería</option>
+                    <option>Facultad de Ciencias</option>
+                    <option>Medio Ambiente</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Proyecto Curricular</label>
+                <select>
+                    <option>Todos</option>
+                    <option selected>Ingeniería de Sistemas</option>
+                    <option>Ingeniería Electrónica</option>
+                    <option>Ingeniería Industrial</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Semestre</label>
+                <select>
+                    <option>Todos</option>
+                    <option>6to Semestre</option>
+                    <option>7mo Semestre</option>
+                    <option selected>8vo Semestre</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Tipo de Material</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" checked> Proyectos y Código</label>
+                    <label><input type="checkbox" checked> Resúmenes</label>
+                    <label><input type="checkbox"> Talleres</label>
+                    <label><input type="checkbox"> Parciales Anteriores</label>
+                </div>
+            </div>
+
+            <button class="btn-filter">Aplicar Filtros</button>
+        </aside>
+
+        <!-- Feed Principal de Apuntes -->
+        <section class="content-feed">
+            <div class="feed-header">
+                <h2>Resultados Destacados</h2>
+                <div class="sort-options">
+                    <span>Ordenar por:</span>
+                    <select>
+                        <option>Mejor Valorados</option>
+                        <option>Más Recientes</option>
+                        <option>Más Descargados</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Tarjeta 1: Adaptada al contexto de ingeniería -->
+                <article class="note-card">
+                    <div class="card-header">
+                        <span class="badge subject">Fundamentos de Ing. de Software</span>
+                        <span class="badge semester">Semestre 8</span>
+                    </div>
+                    <h3 class="card-title">Plantilla y Ejemplos de UML para Proyectos</h3>
+                    <p class="card-desc">Documento en LaTeX con ejemplos de diagramas de casos de uso, estado y componentes para el proyecto final.</p>
+                    <div class="card-meta">
+                        <span class="author"><i class="fa-solid fa-user"></i> Subido por: jcontreras</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.9 (32 votos)</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary"><i class="fa-regular fa-bookmark"></i> Guardar</button>
+                        <button class="btn-primary"><i class="fa-solid fa-download"></i> Descargar PDF</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="note-card">
+                    <div class="card-header">
+                        <span class="badge subject">Arquitectura de Computadores</span>
+                        <span class="badge semester">Semestre 6</span>
+                    </div>
+                    <h3 class="card-title">ALU 8-bits y Unidad de Control en Logisim</h3>
+                    <p class="card-desc">Archivos de simulación de Logisim Evolution y scripts VHDL para la implementación de una arquitectura simple.</p>
+                    <div class="card-meta">
+                        <span class="author"><i class="fa-solid fa-user"></i> Subido por: amdiaz</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 5.0 (45 votos)</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary"><i class="fa-regular fa-bookmark"></i> Guardar</button>
+                        <button class="btn-primary"><i class="fa-solid fa-link"></i> Ver Repositorio</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="note-card">
+                    <div class="card-header">
+                        <span class="badge subject">Formulación de Proyectos</span>
+                        <span class="badge semester">Semestre 8</span>
+                    </div>
+                    <h3 class="card-title">Proyecto Merfi: Documentación de Eficiencia</h3>
+                    <p class="card-desc">Estudio completo sobre la implementación de microrredes de energía renovable en la universidad.</p>
+                    <div class="card-meta">
+                        <span class="author"><i class="fa-solid fa-user"></i> Subido por: equipo_merfi</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.7 (18 votos)</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary"><i class="fa-regular fa-bookmark"></i> Guardar</button>
+                        <button class="btn-primary"><i class="fa-solid fa-download"></i> Descargar PDF</button>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 4 -->
+                <article class="note-card">
+                    <div class="card-header">
+                        <span class="badge subject">Sistemas Operativos</span>
+                        <span class="badge semester">Semestre 5</span>
+                    </div>
+                    <h3 class="card-title">Guía de Configuración Dual-Boot: Fedora & Windows</h3>
+                    <p class="card-desc">Paso a paso para particionar, instalar distribuciones Linux y configurar reglas de firewall básicas.</p>
+                    <div class="card-meta">
+                        <span class="author"><i class="fa-solid fa-user"></i> Subido por: linux_master</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.8 (112 votos)</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary"><i class="fa-regular fa-bookmark"></i> Guardar</button>
+                        <button class="btn-primary"><i class="fa-solid fa-download"></i> Descargar PDF</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
